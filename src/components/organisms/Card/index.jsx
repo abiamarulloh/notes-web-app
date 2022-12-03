@@ -2,16 +2,16 @@ import { Title } from "../../atoms/Title";
 import { CardItem } from "../../molecules/CardItem";
 import './index.css';
 
-export function Card({ cardTitle, cardData, isArchived = false }) {
+export function Card({ cardTitle, cardData, isArchived = false, onDelete, onMoveTo }) {
     function CardItemCondition() {
-        const isAnyData = cardData.length > 0;
+        const isAnyData = cardData.find((cardDataItem) => cardDataItem.archived === isArchived);
         if (isAnyData) {
             return (
                 <div className="cards">
                     {
                         cardData.map((data, key) => {
                             if(isArchived === data.archived) {
-                                return <CardItem data={data} key={key} />
+                                return <CardItem data={data} key={key} onDelete={onDelete} onMoveTo={onMoveTo} />
                             }
                             return true;
                         }) 

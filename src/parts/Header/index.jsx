@@ -2,7 +2,7 @@ import { Input } from "../../components/atoms/Input";
 import { Title } from "../../components/atoms/Title";
 import './index.css';
 
-export function Header() {
+export function Header({inputOnChange}) {
     return (
         <>
             <div className="header">
@@ -10,7 +10,7 @@ export function Header() {
                     <Title title="Notes" />
                 </div>
                 <div className="header-item">
-                    <Input type="text"  placeholder="Cari catatan..." />
+                    <Input type="text" onChange={inputOnChange} placeholder="Cari catatan..." />
                 </div>
             </div>
             <hr />
