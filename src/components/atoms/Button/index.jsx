@@ -1,7 +1,7 @@
 import './index.css';
 
-export function Button({ title, type }) {
+export function Button({ title, type, color }) {
     return (
-        <button  type={type}>{title}</button>
+        <button style={{ color: color }} type={type}>{title}</button>
     );
 }

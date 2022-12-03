@@ -1,7 +1,7 @@
 import './index.css'
 
-export function Title({title, size}) {
+export function Title({title, size, align, color}) {
     return (
-       <h1 style={{fontSize: size}}>{title}</h1>
+       <h1 style={{fontSize: size, textAlign: align, color: color }}>{title}</h1>
     );
 }

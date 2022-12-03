@@ -9,9 +9,11 @@ export function Form() {
         <div className="form">
             <Title title="Buat Catatan" size="20px" />
             <p>Sisa Karakter: 50</p>
-            <Input type="text" placeholder="Tuliskan Judul disini..." />
-            <Textarea placeholder="Tuliskan catatanmu disini.." />
-            <Button title="Submit" type="submit" />
+            <form action="">
+                <Input type="text" placeholder="Tuliskan Judul disini..." />
+                <Textarea placeholder="Tuliskan catatanmu disini.." />
+                <Button title="Submit" type="submit" />
+            </form>
         </div>
     );
 }
